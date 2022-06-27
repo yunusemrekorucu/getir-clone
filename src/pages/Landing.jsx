@@ -1,7 +1,10 @@
 //! İMPORTS
 //* COMPONENTS
-import LandingCarousel from "../components/LandingCarousel";
-import Navbar from "../components/Navbar";
+import Campaigins from "../components/LandingPage/campaigins";
+import Categorys from "../components/LandingPage/Categorys";
+import Footer from "../components/LandingPage/Footer";
+import Carousel from "../components/LandingPage/Carousel";
+import Navbar from "../components/LandingPage/Navbar";
 //? CSS
 import "../styles/Landing.scss";
 
@@ -9,7 +12,10 @@ const Landing = () => {
   return (
     <div>
       <Navbar />
-      <LandingCarousel />
+      <Carousel />
+      <Categorys />
+      <Campaigins />
+      <Footer />
     </div>
   );
 };
