@@ -1,0 +1,43 @@
+@import "../../styles/_global.scss";
+//!FOOTER SECTİON
+.footer {
+    display: flex;
+    div {
+      width: 100%;
+      height: 246px;
+      p {
+        color: $primary-color;
+        font-weight: 500;
+        line-height: 26px;
+        font-size: 18px;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        li {
+          padding-bottom: 12px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .footer-about {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 24px 17.5%;
+    div {
+      display: flex;
+      font-size: 13px;
+      img {
+        margin: 0px 15px;
+      }
+      li {
+        color: $primary-color;
+        padding-left: 12px;
+      }
+    }
+  }
+  //!FOOTER SECTİON

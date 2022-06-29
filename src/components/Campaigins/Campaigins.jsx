@@ -1,16 +1,12 @@
+import "./campaigins.scss";
 const Campaigins = () => {
   return (
     <div className="campaigins container">
       <h6>Kampanyalar</h6>
       <section className="banners">
         <img src="./images/banner1.jpeg" alt="" width={400} height={200} />
-        <img
-          src="./images/banner2.png"
-          alt=""
-          width={400}
-          height={200}
-          style={{ paddingLeft: "16px" }}
-        />
+        <img src="./images/banner2.png" alt="" width={400} height={200} />
+        <img src="./images/banner3.jpeg" alt="" width={400} height={200} />
       </section>
 
       <section className="big-banner">

@@ -1,17 +1,16 @@
 //! İMPORTS
+import React from "react";
 //* COMPONENTS
-import Campaigins from "../components/LandingPage/campaigins";
-import Categorys from "../components/LandingPage/Categorys";
-import Footer from "../components/LandingPage/Footer";
-import Carousel from "../components/LandingPage/Carousel";
-import Navbar from "../components/LandingPage/Navbar";
+import Campaigins from "../components/Campaigins/Campaigins";
+import Categorys from "../components/Categorys/Categorys";
+import Carousel from "../components/BigCarousel/Carousel";
 //? CSS
 import "../styles/Landing.scss";
+import Footer from "../components/Footer/Footer";
 
 const Landing = () => {
   return (
     <div>
-      <Navbar />
       <Carousel />
       <Categorys />
       <Campaigins />

@@ -1,12 +1,23 @@
+import React from "react";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import "./big-carousel.scss"
+
 const Carousel = () => {
-  const loginModal = ()=>{
-    console.log("aşsdkfjas")
-  }
+  let navigate = useNavigate();
+  const [loginForm, setLoginForm] = useState("");
+  const loginModal = () => {
+    if (loginForm.length <= 4) {
+      alert("lütfen geçerli bir telefon numarası giriniz");
+    } else {
+      navigate("/kategori");
+    }
+  };
   return (
     <div className="carousel">
       <img src="./images/carousel-item.png" alt="" width="100%" height="500" />
-      <div className="image-blur">
-        <div className="container intro-form">
+      <div className="image-blur container">
+        <div className="intro-form">
           <div className="advertisement">
             <img
               src="./svg/getir-circle-logo.svg"
@@ -26,7 +37,12 @@ const Carousel = () => {
                 <option value="">+49</option>
                 <option value="">+93</option>
               </select>
-              <input type="text" placeholder="Telefon Numarası" />
+              <input
+                onChange={(e) => setLoginForm(e.target.value)}
+                value={loginForm}
+                type="text"
+                placeholder="Telefon Numarası"
+              />
             </div>
             <button onClick={() => loginModal()} className="auth-button">
               Telefon numarası ile devam et

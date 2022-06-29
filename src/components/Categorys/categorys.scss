@@ -1,0 +1,43 @@
+@import "../../styles/_global.scss";
+.categorys {
+  padding: 18px 0px 30px 0px;
+  box-shadow: 0px 25px 45px 0px rgba(0, 0, 0, 0.51);
+}
+.categorys p {
+  margin: 0;
+  font-weight: 600;
+  font-size: 14px;
+}
+.product-categorys {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(10, 1fr);
+}
+.product-categorys-item {
+  transition: background 0.2s cubic-bezier(0.39, 0.58, 0.57, 1) 0s;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 108px;
+  img {
+    border-radius: 8px;
+    margin: 0 auto;
+  }
+  span {
+    margin-top: 12px;
+    font-size: 15px;
+    transition: color 0.2s ease 0s;
+    color: $gray-dark;
+    font-weight: 600;
+  }
+}
+.product-categorys-item:hover {
+  color: $primary-color;
+  background: rgba(93, 62, 188, 0.062);
+}
+.product-categorys-item:hover span {
+  color: $primary-color;
+}
+//! CATEGORYS SECTİON
