@@ -14,7 +14,7 @@ const Campaigins = () => {
           src="./images/bigbanner.png"
           alt=""
           width="100%"
-          style={{ borderRadius: "8px", margin: "24px 0px" }}
+          style={{ margin: "24px 0px" }}
         />
         <div className="bigbanner-detail">
           <div className="big-banner-comment">

@@ -1,6 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import LoginModal from "../LoginModal/LoginModal";
 import "./navbar.scss";
-const Navbar = () => {
+const Navbar = props => {
+  const locationUrl = window.location.href;
+  const [authNav, setAuthNav] = useState(false);
+  const [modal, setModal] = useState(false);
+  
+  useEffect(() => {
+    if (locationUrl !== "http://localhost:3000/") {
+      setAuthNav(true);
+    } else {
+      setAuthNav(false);
+    }
+  }, []);
+
+  const openModal = () => {setModal(true)}; //prettier-ignore
   return (
     <div className="navbar">
       <img
@@ -28,25 +42,53 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="right">
-        <ul>
-          <li>
-            <img src="./svg/language.svg" alt="" width={16} height={16} />
-            <p>Türkçe</p>
-          </li>
-          <li>
-            <img src="./svg/login-person.svg" alt="" width={16} height={16} />
-            <p>Giriş Yap</p>
-          </li>
-          <li>
-            <img
-              src="./svg/register-person.svg"
-              width={16}
-              height={16}
-              alt=""
-            />
-            <p>Kayıt Ol</p>
-          </li>
-        </ul>
+        <LoginModal modal={modal} setModal={setModal} />
+
+        {authNav
+          ? <ul>
+              <li>
+                <img src="./svg/language.svg" alt="" width={16} height={16} />
+                <p>Türkçe</p>
+              </li>
+              <li>
+                <img src="./svg/campaigins.svg" alt="" width={16} height={16} />
+                <p>Kampanyalar</p>
+              </li>
+              <li>
+                <img
+                  src="./svg/login-person.svg"
+                  alt=""
+                  width={16}
+                  height={16}
+                />
+                <p>Profil</p>
+                <img src="./svg/downarrow.svg" alt="" width={9} height={9} />
+              </li>
+            </ul>
+          : <ul>
+              <li>
+                <img src="./svg/language.svg" alt="" width={16} height={16} />
+                <p>Türkçe</p>
+              </li>
+              <li onClick={openModal}>
+                <img
+                  src="./svg/login-person.svg"
+                  alt=""
+                  width={16}
+                  height={16}
+                />
+                <p>Giriş Yap</p>
+              </li>
+              <li>
+                <img
+                  src="./svg/register-person.svg"
+                  width={16}
+                  height={16}
+                  alt=""
+                />
+                <span>Kayıt Ol</span>
+              </li>
+            </ul>}
       </div>
     </div>
   );

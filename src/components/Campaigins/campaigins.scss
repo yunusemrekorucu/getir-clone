@@ -16,11 +16,13 @@
   img {
     margin: 0 !important;
     height: 100%;
+    border-radius: 8px;
   }
 }
 .banners {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3 , 1fr);
+  gap: 16px;
 }
 .banners img {
   border-radius: 8px;
@@ -76,3 +78,20 @@
   }
 }
 //! CAMPAİGİNS SECTİON
+
+@media only screen and (max-width: 1200px) {
+  .banners {
+    grid-template-columns: repeat(2, 1fr);
+    img {
+      margin-top: 20px;
+    }
+  }
+}
+@media only screen and (max-width: 900px) {
+  .banners {
+    display: none;
+  }
+  .big-banner img{
+    border-radius: 0;
+  }
+}

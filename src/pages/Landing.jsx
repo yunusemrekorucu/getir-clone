@@ -1,5 +1,5 @@
 //! İMPORTS
-import React from "react";
+import React, { useState } from "react";
 //* COMPONENTS
 import Campaigins from "../components/Campaigins/Campaigins";
 import Categorys from "../components/Categorys/Categorys";
@@ -8,10 +8,13 @@ import Carousel from "../components/BigCarousel/Carousel";
 import "../styles/Landing.scss";
 import Footer from "../components/Footer/Footer";
 
-const Landing = () => {
+const Landing = props => {
+
+  const [loginForm, setLoginForm] = useState("");
+
   return (
     <div>
-      <Carousel />
+      <Carousel loginForm={loginForm} setLoginForm={setLoginForm}/>
       <Categorys />
       <Campaigins />
       <Footer />

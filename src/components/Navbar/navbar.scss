@@ -42,14 +42,14 @@
     display: flex;
     font-size: 14px;
     font-weight: bolder;
+    justify-content: end;
     li {
+      cursor: pointer;
       display: flex;
       align-items: center;
+      justify-content:space-evenly;
       list-style: none;
-      padding: 0px 20px;
-      p {
-        margin-left: 10px;
-      }
+      width:120px;
     }
   }
 }
