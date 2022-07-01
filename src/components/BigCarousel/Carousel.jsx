@@ -3,6 +3,11 @@ import { useNavigate } from "react-router-dom";
 import TextInput from "../common/TextInput/TextInput";
 import CountryInput from "../common/SelectInput/CountryInput";
 import "./big-carousel.scss";
+//! Owl Carousel
+import ReactOwlCarousel from "react-owl-carousel";
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
+
 
 const Carousel = props => {
   const { loginForm, setLoginForm } = props;
@@ -17,9 +22,18 @@ const Carousel = props => {
   };
 
   return (
+    <>
     <div className="carousel">
-      <img src="./images/carousel-item.png" alt="" width="100%" height="500" />
-      <div className="image-blur container">
+   <div className="image">  
+   <ReactOwlCarousel autoplay={true} loop margin={0} touchDrag={false} mouseDrag={false} items={1}>
+   <img src="./images/carousel-item.png" alt=""  height="500" />
+   <img src="./images/carousel-item2.jpeg" alt="" height="500" />
+   <img src="./images/carousel-item3.jpeg" alt="" height="500" />
+   <img src="./images/carousel-item4.jpeg" alt="" height="500" />
+   </ReactOwlCarousel>
+    <div className="blur"/>
+   </div>
+      <div className="image-form container">
         <div className="intro-form">
           <div className="advertisement">
             <img
@@ -49,6 +63,7 @@ const Carousel = props => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

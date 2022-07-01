@@ -4,15 +4,30 @@
   position: relative;
   width: 100%;
   padding-top: 45px;
-  img {
-    object-fit: cover;
-  }
-  .image-blur {
+  .image-form {
     position: absolute;
     width: 100%;
     height: 500px;
-    top: 0;
+    top: 40px;
+    z-index: 80;
   }
+}
+.image{
+  img{
+    object-fit: cover
+  }
+}
+.blur {
+  background: linear-gradient(
+    90deg,
+    rgb(93, 62, 188) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  width: 100%;
+  height: 500px;
+  position: absolute;
+  top: 45px;
+  z-index: 77;
 }
 .advertisement {
   div {
@@ -71,3 +86,19 @@
   color: #f1d445;
 }
 //! CAROUSEL SECTİON
+@media only screen and (max-width: 768px){
+  .image{
+    display: none;
+  }
+  .carousel{
+    .image-form{
+      position: relative;
+      height: 100%;
+      padding: 0;
+    }
+  }
+  .login-form{
+    width: 100%;
+    margin: 0;
+  }
+}

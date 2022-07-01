@@ -22,6 +22,11 @@ const Campaigins = () => {
             <span>
               istediğiniz ürünleri dakikaler içinde kapınıza getirelim.
             </span>
+            <div className="big-banner-app">
+              <img src="./svg/appgallery.svg" alt="" width={160} height={48} />
+              <img src="./svg/appgallery.svg" alt="" width={160} height={48} />
+              <img src="./svg/appgallery.svg" alt="" width={160} height={48} />
+            </div>
           </div>
           <div className="banner-phone">
             <img src="./images/phone.png" alt="" width="605" />

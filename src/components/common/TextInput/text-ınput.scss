@@ -1,4 +1,3 @@
-@import "../../../styles/_global.scss";
 .text-input-box {
   position: relative;
   height: 52px;
@@ -29,5 +28,5 @@
   transform: translateY(-130%);
   font-size: 12px;
   font-weight:500;
-  color: $primary-color;
+  color: #000;
 }

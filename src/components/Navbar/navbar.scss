@@ -47,9 +47,9 @@
       cursor: pointer;
       display: flex;
       align-items: center;
-      justify-content:space-evenly;
+      justify-content: space-evenly;
       list-style: none;
-      width:120px;
+      width: 120px;
     }
   }
 }
@@ -57,3 +57,28 @@
   display: none;
 }
 //!NAVBAR SECTİON
+
+@media only screen and (max-width: 1240px) {
+  .navbar{
+    padding: 0px 20px;
+  }
+}
+@media only screen and (max-width: 1024px){
+  .right ul li{
+    width: 50px;
+    height: 36px;
+    p{
+      display: none;
+    }
+  } 
+}
+@media only screen and (max-width: 768px){
+  .right {
+    display: none;
+  }
+  .navbar{
+    overflow: auto;
+    overflow-y: hidden;
+    width: 100%;
+  }
+}
