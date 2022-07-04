@@ -6,11 +6,13 @@ import "./campaigins-carousel.scss";
 
 function CampaiginsCarousel() {
   return (
-    <ReactOwlCarousel className="campaigins-caorousel" autoplay={true} items={1}>
-      <div className="campaigins-carusel"><img src="./images/banner1.jpeg" alt="" width={400} height={200} /></div>
-      <div className="campaigins-carusel"><img src="./images/banner2.png" alt="" width={400} height={200} /></div>
-      <div className="campaigins-carusel"><img src="./images/banner3.jpeg" alt="" width={400} height={200} /></div>
+    <div className="campaigins-carousel">
+      <ReactOwlCarousel autoplay={true} items={1} loop={true}>
+     <img src="./images/banner1.jpeg" alt="" width={400} height={200} /> 
+     <img src="./images/banner2.png" alt="" width={400} height={200} /> 
+     <img src="./images/banner3.jpeg" alt="" width={400} height={200} /> 
     </ReactOwlCarousel>
+    </div>
   );
 }
 

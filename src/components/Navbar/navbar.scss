@@ -30,6 +30,12 @@
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
   }
+  li:hover {
+    background: #5D3EBC;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    cursor:pointer;
+  }
 }
 .left {
   display: flex;
@@ -59,24 +65,24 @@
 //!NAVBAR SECTİON
 
 @media only screen and (max-width: 1240px) {
-  .navbar{
+  .navbar {
     padding: 0px 20px;
   }
 }
-@media only screen and (max-width: 1024px){
-  .right ul li{
+@media only screen and (max-width: 1024px) {
+  .right ul li {
     width: 50px;
     height: 36px;
-    p{
+    p {
       display: none;
     }
-  } 
+  }
 }
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 768px) {
   .right {
     display: none;
   }
-  .navbar{
+  .navbar {
     overflow: auto;
     overflow-y: hidden;
     width: 100%;

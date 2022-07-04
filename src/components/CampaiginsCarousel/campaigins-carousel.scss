@@ -1,9 +1,9 @@
 .campaigins-carousel{
-    display:none !important;
-    border:1px solid red;
+    display:none;
+    padding-top:100px;
 }
 @media only screen and (max-width:768px){
-    .mobile-carousel{
+    .campaigins-carousel{
         display: block;
     }
 }
