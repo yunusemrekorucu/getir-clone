@@ -240,6 +240,28 @@ const RegisterPerson = ({ fill, size }) => {
     </svg>
   );
 };
+const LeftArrow = ({ fill, size }) => {
+  return (
+    <svg
+      data-testid="icon"
+      name="profile"
+      size="16"
+      color="#DBDBFF"
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 32 32"
+      class="style__Icon-sc-__sc-hqksj3-1 gcTOvW"
+      width={size}
+      height={size}
+    >
+      <path
+        fill={fill}
+        d="M24.472 0.669c-0.892-0.892-2.332-0.892-3.224 0l-13.719 13.719c-0.892 0.892-0.892 2.332 0 3.224l13.719 13.719c0.892 0.892 2.332 0.892 3.224 0s0.892-2.332 0-3.224l-12.096-12.096 12.096-12.096c0.892-0.892 0.892-2.355 0-3.247z"
+        class="style__Path-sc-__sc-hqksj3-2 lcjQMU"
+      />
+    </svg>
+  );
+};
 
 const Icon = ({ name, size = "24", fill }) => {
   const icons = {
@@ -253,7 +275,8 @@ const Icon = ({ name, size = "24", fill }) => {
     registerPerson: RegisterPerson,
     instagram: Instagram,
     facebook: Facebook,
-    campaigins: Campaigins
+    campaigins: Campaigins,
+    leftArrow: LeftArrow
   };
 
   const Component = icons[name];

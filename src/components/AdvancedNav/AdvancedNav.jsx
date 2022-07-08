@@ -1,5 +1,6 @@
 import React from "react";
 import "./advanced-nav.scss";
+import Icon from "../../assets/svgs"
 
 function AdvancedNav() {
   return (
@@ -18,6 +19,7 @@ function AdvancedNav() {
           <img src="./svg/home.svg" alt="" />
           Ev
           <img src="./svg/right-arrow.svg" alt="" width={12} height={12} />
+          <Icon name="rightArrow" size="12"/>
         </button>
         <span>TVS 9 dk</span>
       </div>
