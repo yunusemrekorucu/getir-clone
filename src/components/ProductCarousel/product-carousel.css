@@ -1,0 +1,23 @@
+.product-carousel {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 24px 0px;
+}
+.carousel-item {
+  width: 400px;
+  height: 200px;
+}
+.carousel-item img {
+  border-radius: 8px;
+}
+.arrow {
+  position: absolute;
+  top: 50%;
+}
+.right-arr {
+  right: -30px;
+}
+.left-arr {
+  left: -30px;
+}

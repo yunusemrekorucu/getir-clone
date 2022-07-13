@@ -1,21 +1,18 @@
-//! Carousel Section
 .carousel {
   background: white;
   position: relative;
   width: 100%;
   padding-top: 45px;
-  .image-form {
-    position: absolute;
-    width: 100%;
-    height: 500px;
-    top: 40px;
-    z-index: 80;
-  }
 }
-.image{
-  img{
-    object-fit: cover
-  }
+.image-form {
+  position: absolute;
+  width: 100%;
+  height: 500px;
+  top: 40px;
+  z-index: 80;
+}
+.image img {
+  object-fit: cover;
 }
 .blur {
   background: linear-gradient(
@@ -29,13 +26,12 @@
   top: 45px;
   z-index: 77;
 }
-.advertisement {
-  div {
-    width: 300px;
-    color: white;
-    font-weight: 900;
-    margin-top: 30px;
-  }
+
+.advertisement div {
+  width: 300px;
+  color: white;
+  font-weight: 900;
+  margin-top: 30px;
 }
 .intro-form {
   display: flex;
@@ -53,12 +49,12 @@
   border-radius: 8px;
   padding: 24px;
   margin-right: 14px;
-  h5 {
-    margin: 0px 0px 15px 0px;
-    font-size: 16px;
-    font-weight: 700;
-    color: #7849f7;
-  }
+}
+.login-form h5 {
+  margin: 0px 0px 15px 0px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #7849f7;
 }
 .form {
   width: 100%;
@@ -85,20 +81,22 @@
   background-color: #7849f7;
   color: #f1d445;
 }
-//! CAROUSEL SECTİON
-@media only screen and (max-width: 768px){
-  .image{
+
+/* Carousel Section */
+
+@media only screen and (max-width: 768px) {
+  .image {
     display: none;
   }
-  .carousel{
-    padding-top:0px;
-    .image-form{
-      position: relative;
-      height: 100%;
-      padding: 0;
-    }
+  .carousel {
+    padding-top: 0px;
   }
-  .login-form{
+  .carousel .image-form {
+    position: relative;
+    height: 100%;
+    padding: 0;
+  }
+  .login-form {
     width: 100%;
     margin: 0;
   }

@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import TextInput from "../common/TextInput/TextInput";
 import CountryInput from "../common/SelectInput/CountryInput";
-import "./big-carousel.scss";
+import "./big-carousel.css";
 //! Owl Carousel
 import ReactOwlCarousel from "react-owl-carousel";
 import 'owl.carousel/dist/assets/owl.carousel.css';
@@ -25,7 +25,7 @@ const Carousel = props => {
     <>
     <div className="carousel">
    <div className="image">  
-   <ReactOwlCarousel autoplay={true} loop margin={0} touchDrag={false} mouseDrag={false} items={1}>
+   <ReactOwlCarousel autoplay={true} loop margin={0} touchDrag={false} mouseDrag={false} items={1} dots={false}>
    <img src="./images/carousel-item.png" alt=""  height="500" />
    <img src="./images/carousel-item2.jpeg" alt="" height="500" />
    <img src="./images/carousel-item3.jpeg" alt="" height="500" />
