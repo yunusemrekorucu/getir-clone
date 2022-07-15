@@ -11,22 +11,22 @@ function ProductCarousel() {
           <Icon name="leftArrow" fill="#7A61C7" size="14" />
         </span>
         <ReactOwlCarousel items={3} autoplay={true} loop={true} dots={false}>
-          <div class="carousel-item">
+          <div className="carousel-item">
             <img src="./images/product-carousel-item1.jpeg" alt="" />
           </div>
-          <div class="carousel-item">
+          <div className="carousel-item">
             <img src="./images/product-carousel-item2.jpeg" alt="" />
           </div>
-          <div class="carousel-item">
+          <div className="carousel-item">
             <img src="./images/product-carousel-item3.jpeg" alt="" />
           </div>
-          <div class="carousel-item">
+          <div className="carousel-item">
             <img src="./images/product-carousel-item4.jpeg" alt="" />
           </div>
-          <div class="carousel-item">
+          <div className="carousel-item">
             <img src="./images/product-carousel-item5.jpeg" alt="" />
           </div>
-          <div class="carousel-item">
+          <div className="carousel-item">
             <img src="./images/product-carousel-item6.jpeg" alt="" />
           </div>
         </ReactOwlCarousel>

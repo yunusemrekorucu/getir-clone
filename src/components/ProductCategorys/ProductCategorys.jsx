@@ -23,9 +23,6 @@ function ProductCategorys(props) {
                 </div>
                 <Icon name="downArrow" size="10" fill="#A1A1A1" />
               </li>
-                {item.categorys.map(category=>(<div>
-                    <span>{category.title}</span>
-                </div>))}
               </>
             )}
           </ul>

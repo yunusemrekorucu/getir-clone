@@ -2,18 +2,26 @@ import React, { useEffect, useState } from "react";
 import Icon from "../../assets/svgs";
 import LoginModal from "../LoginModal/LoginModal";
 import "./navbar.scss";
+
 const Navbar = props => {
-  const locationUrl = window.location.href;
   const [authNav, setAuthNav] = useState(false);
   const [modal, setModal] = useState(false);
 
-  useEffect(() => {
-    if (locationUrl !== "http://localhost:3000/") {
-      setAuthNav(true);
-    } else {
-      setAuthNav(false);
-    }
-  }, []);
+  useEffect(
+    () => {
+      if (!props.authenticated) {
+        setAuthNav(true);
+      } else {
+        setAuthNav(false);
+      }
+    },
+    [props.authenticated]
+  );
+
+  const logout = () => {
+    props.setAuthenticated(false)
+    localStorage.removeItem('getir_authenticated');
+  }
 
   const openModal = () => {setModal(true)}; //prettier-ignore
   return (
@@ -45,7 +53,7 @@ const Navbar = props => {
       <div className="right">
         <LoginModal modal={modal} setModal={setModal} />
 
-        {authNav
+        {!authNav
           ? <ul>
               <li>
                 <Icon name="language" fill="#fff" size={16} />
@@ -59,6 +67,10 @@ const Navbar = props => {
                 <Icon name="person" fill="#fff" size={16} />
                 <p>Profil</p>
                 <img src="./svg/downarrow.svg" alt="" width={9} height={9} />
+              </li>
+              <li onClick={logout}>
+                <Icon name="person" fill="#fff" size={16} />
+                <p>Çıkış Yap</p>
               </li>
             </ul>
           : <ul>

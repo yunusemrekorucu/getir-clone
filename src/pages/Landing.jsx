@@ -15,7 +15,11 @@ const Landing = props => {
   return (
     <div>
       <CampaiginsCarousel />
-      <Carousel loginForm={loginForm} setLoginForm={setLoginForm} />
+      <Carousel
+        setAuthenticated={props.setAuthenticated}
+        loginForm={loginForm}
+        setLoginForm={setLoginForm}
+      />
       <Categorys />
       <Campaigins />
       <Footer />

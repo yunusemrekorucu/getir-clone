@@ -8,7 +8,7 @@ function TextInput(props) {
   return (
     <div className="text-input-box">
       <input
-        maxlength="10"
+        maxLength="10"
         onFocus={() => setFocus(true)}
         onBlur={() => (loginForm === '' ? setFocus(false) : setFocus(true))}
         className="text-ınp"

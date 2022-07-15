@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import AdvancedNav from "../components/AdvancedNav/AdvancedNav";
 import PriceSection from "../components/PriceSection/PriceSection";
 import ProductCarousel from "../components/ProductCarousel/ProductCarousel";
@@ -7,6 +7,11 @@ import Categorys from "../Json/product-categorys.json";
 
 const Home = () => {
   const [panel, setPanel] = useState(false);
+
+  useEffect(() => {
+    
+  }, [])
+  
 
   return (
     <div className="home">
