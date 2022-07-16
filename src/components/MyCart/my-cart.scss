@@ -1,0 +1,33 @@
+.my-cart {
+  position: sticky;
+  top: 130px;
+  height: 82vh;
+  h4 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+  }
+}
+.mycart-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 10px;
+  padding: 8px 24px;
+  border: 2px solid #ffd300;
+  width: 300px;
+  height: 350px;
+  border-radius: 8px;
+  h3 {
+    margin: 30px 0 12px 0;
+    color: #5d3ebc;
+    font-size: 16px;
+  }
+  p {
+    margin: 0px;
+    color: #697488;
+    font-size: 14px;
+  }
+}

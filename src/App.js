@@ -6,7 +6,7 @@ import {
   Routes
 } from "react-router-dom";
 import Landing from "./pages/Landing";
-import Home from "./pages/Home";
+import Home from "./pages/Main/Home";
 import Navbar from "./components/Navbar/Navbar";
 import { useEffect, useState } from "react";
 

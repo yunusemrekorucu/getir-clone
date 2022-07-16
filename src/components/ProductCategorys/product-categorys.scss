@@ -2,6 +2,8 @@ body {
   background: #fafafa;
 }
 .main-product-categorys {
+  position: sticky;
+  top: 130px;
   width: 240px;
   display: flex;
   flex-direction: column;
@@ -44,9 +46,9 @@ body {
   background: #f3f0fe;
   cursor: pointer;
 }
-.panel{
-    display: none;
+.panel {
+  display: none;
 }
-.showPanel{
-    display: block;
+.showPanel {
+  display: block;
 }

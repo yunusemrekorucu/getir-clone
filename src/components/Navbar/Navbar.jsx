@@ -3,25 +3,29 @@ import Icon from "../../assets/svgs";
 import LoginModal from "../LoginModal/LoginModal";
 import "./navbar.scss";
 
-const Navbar = props => {
+const Navbar = (props) => {
   const [authNav, setAuthNav] = useState(false);
   const [modal, setModal] = useState(false);
-
-  useEffect(
-    () => {
-      if (!props.authenticated) {
-        setAuthNav(true);
-      } else {
-        setAuthNav(false);
-      }
-    },
-    [props.authenticated]
-  );
+  const [dropDown, setDropDown] = useState(false);
+  useEffect(() => {
+    if (!props.authenticated) {
+      setAuthNav(true);
+    } else {
+      setAuthNav(false);
+    }
+  }, [props.authenticated]);
 
   const logout = () => {
-    props.setAuthenticated(false)
-    localStorage.removeItem('getir_authenticated');
-  }
+    props.setAuthenticated(false);
+    localStorage.removeItem("getir_authenticated");
+  };
+  const dropMenu = () => {
+    if (dropDown) {
+      setDropDown(false);
+    } else {
+      setDropDown(true);
+    }
+  };
 
   const openModal = () => {setModal(true)}; //prettier-ignore
   return (
@@ -53,40 +57,62 @@ const Navbar = props => {
       <div className="right">
         <LoginModal modal={modal} setModal={setModal} />
 
-        {!authNav
-          ? <ul>
-              <li>
-                <Icon name="language" fill="#fff" size={16} />
-                <p>Türkçe</p>
-              </li>
-              <li>
-                <Icon name="campaigins" fill="#fff" size={16} />
-                <p>Kampanyalar</p>
-              </li>
-              <li>
-                <Icon name="person" fill="#fff" size={16} />
-                <p>Profil</p>
-                <img src="./svg/downarrow.svg" alt="" width={9} height={9} />
-              </li>
-              <li onClick={logout}>
-                <Icon name="person" fill="#fff" size={16} />
-                <p>Çıkış Yap</p>
-              </li>
-            </ul>
-          : <ul>
-              <li>
-                <Icon name="language" fill="#fff" size={16} />
-                <p>Türkçe</p>
-              </li>
-              <li onClick={openModal}>
-                <Icon name="person" fill="#fff" size={16} />
-                <p>Giriş Yap</p>
-              </li>
-              <li>
-                <Icon name="registerPerson" fill="#fff" size={16} />
-                <p>Kayıt Ol</p>
-              </li>
-            </ul>}
+        {!authNav ? (
+          <ul>
+            <li>
+              <Icon name="language" fill="#fff" size={16} />
+              <p>Türkçe</p>
+            </li>
+            <li>
+              <Icon name="campaigins" fill="#fff" size={16} />
+              <p>Kampanyalar</p>
+            </li>
+            <li onClick={dropMenu}>
+              <Icon name="person" fill="#fff" size={16} />
+              <p>Profil</p>
+              <span className={`down-arr ${dropDown ? "rotate-arr" : null}`}>
+                <Icon name="downArrow" size={9} fill="#fff" />
+              </span>
+            </li>
+
+            <div className={`drop-menu ${dropDown ? `open-drop-menu` : null}`}>
+              <header>
+                <figure>
+                  <img src="./svg/avatar.svg" alt="" width={26} />
+                </figure>
+                <div>
+                  <span>Yunus Emre Korucu</span>
+                  <span>+905527994534</span>
+                </div>
+              </header>
+              <div>
+                <li>Adreslerim</li>
+                <li>Favori Ürünlerim</li>
+                <li>Geçmiş Siparişlerim</li>
+                <li>Ödeme Yöntemlerim</li>
+                <li>Fatura Bilgileri</li>
+                <li>İletişim Tercihlerim</li>
+                <hr />
+                <li onClick={logout}>Çıkış Yap</li>
+              </div>
+            </div>
+          </ul>
+        ) : (
+          <ul>
+            <li>
+              <Icon name="language" fill="#fff" size={16} />
+              <p>Türkçe</p>
+            </li>
+            <li onClick={openModal}>
+              <Icon name="person" fill="#fff" size={16} />
+              <p>Giriş Yap</p>
+            </li>
+            <li>
+              <Icon name="registerPerson" fill="#fff" size={16} />
+              <p>Kayıt Ol</p>
+            </li>
+          </ul>
+        )}
       </div>
     </div>
   );

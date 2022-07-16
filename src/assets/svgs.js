@@ -262,6 +262,27 @@ const LeftArrow = ({ fill, size }) => {
     </svg>
   );
 };
+const Plus = ({ fill, size }) => {
+  return (
+    <svg
+      data-testid="icon"
+      name="profile"
+      size="16"
+      color="#DBDBFF"
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 32 32"
+      class="style__Icon-sc-__sc-hqksj3-1 gcTOvW"
+      width={size}
+      height={size}
+    >
+      <path
+        fill={fill}
+        d="M16 32c1.1 0 2-0.9 2-2v-12h12c1.1 0 2-0.9 2-2s-0.9-2-2-2h-12v-12c0-1.1-0.9-2-2-2s-2 0.9-2 2v12h-12c-1.1 0-2 0.9-2 2s0.9 2 2 2h12v12c0 1.1 0.9 2 2 2z"
+      />
+    </svg>
+  );
+};
 
 const Icon = ({ name, size = "24", fill }) => {
   const icons = {
@@ -276,7 +297,8 @@ const Icon = ({ name, size = "24", fill }) => {
     instagram: Instagram,
     facebook: Facebook,
     campaigins: Campaigins,
-    leftArrow: LeftArrow
+    leftArrow: LeftArrow,
+    plus: Plus
   };
 
   const Component = icons[name];

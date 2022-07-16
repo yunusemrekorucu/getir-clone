@@ -3,28 +3,29 @@ import Icon from "../../assets/svgs";
 import "./product-categorys.scss";
 
 function ProductCategorys(props) {
-    const {panel , setPanel ,Categorys} = props;
-    const openPanel = (id)=>{
-    }
+  const { panel, setPanel, Categorys } = props;
+  const openPanel = (id) => {};
   return (
-    <div className="container">
+    <div>
       <div className="main-product-categorys">
         <h4>Kategoriler</h4>
         <div>
           <ul className="category-list">
-            {Categorys.map(item =>
+            {Categorys.map((item) => (
               <>
-              <li onClick={()=>openPanel(item.id)} key={item.id} className="category-item">
-                <div>
-                  <img src={item.image} alt="" width={30} />
-                  <span>
-                    {item.title}
-                  </span>
-                </div>
-                <Icon name="downArrow" size="10" fill="#A1A1A1" />
-              </li>
+                <li
+                  onClick={() => openPanel(item.id)}
+                  key={item.id}
+                  className="category-item"
+                >
+                  <div>
+                    <img src={item.image} alt="" width={30} />
+                    <span>{item.title}</span>
+                  </div>
+                  <Icon name="downArrow" size="10" fill="#A1A1A1" />
+                </li>
               </>
-            )}
+            ))}
           </ul>
         </div>
       </div>

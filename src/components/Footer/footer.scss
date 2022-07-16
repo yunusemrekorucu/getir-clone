@@ -1,6 +1,7 @@
 //!FOOTER SECTİON
 .footer {
-  padding-bottom: 20px;
+  padding: 20px 0px;
+  background: white;
   .contents {
     display: flex;
     justify-content: end;
@@ -41,6 +42,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: white;
   .footer-c {
     border-top: 1px solid #f3f0fe;
     display: flex;

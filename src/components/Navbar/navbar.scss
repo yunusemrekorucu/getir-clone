@@ -31,10 +31,10 @@
     border-top-right-radius: 5px;
   }
   li:hover {
-    background: #5D3EBC;
+    background: #5d3ebc;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
-    cursor:pointer;
+    cursor: pointer;
   }
 }
 .left {
@@ -59,8 +59,73 @@
     }
   }
 }
+.drop-menu {
+  background: white;
+  height: 376px;
+  width: 260px;
+  position: absolute;
+  margin-top: 42px;
+  border-radius: 0px 0px 4px 4px;
+  transition: 0.3s;
+  opacity: 0;
+  header {
+    background: #f3f0fe;
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    height: 72px;
+    margin-bottom: 8px;
+    figure {
+      width: 40px;
+      height: 40px;
+      background: white;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+    }
+    div {
+      display: flex;
+      flex-direction: column;
+      margin-left: 16px;
+      font-weight: 400;
+      span:nth-child(1) {
+        color: #191919;
+      }
+      span:nth-child(2) {
+        color: #697488;
+        font-size: 12px;
+      }
+    }
+  }
+  div {
+    color: #191919;
+    font-weight: 400;
+
+    li {
+      width: 100%;
+      display: flex;
+      justify-content: start;
+      padding: 8px 16px;
+      line-height: 24px;
+    }
+    li:hover {
+      background: rgb(241, 238, 243);
+    }
+  }
+}
+.open-drop-menu {
+  opacity: 1;
+}
 .logo {
   display: none;
+}
+.down-arr {
+  transition: .4s;
+}
+.rotate-arr {
+  transform: rotate(-180deg);
 }
 //!NAVBAR SECTİON
 

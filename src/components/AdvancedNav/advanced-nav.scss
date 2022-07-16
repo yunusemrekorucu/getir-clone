@@ -4,6 +4,9 @@
   justify-content: space-between;
   align-items: center;
   height: 75px;
+  position: fixed;
+  z-index: 800;
+  width: 100%;
 }
 .input-box {
   display: flex;
