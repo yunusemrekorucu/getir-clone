@@ -14,6 +14,8 @@
   position: relative;
   margin-right: 100px;
   .search-svg {
+    display: flex;
+    align-items: center;
     position: absolute;
     left: 16px;
     top: 12px;

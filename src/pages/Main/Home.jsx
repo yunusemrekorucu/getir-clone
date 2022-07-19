@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import AdvancedNav from "../../components/AdvancedNav/AdvancedNav";
 import PriceSection from "../../components/PriceSection/PriceSection";
 import ProductCarousel from "../../components/ProductCarousel/ProductCarousel";
@@ -11,8 +11,8 @@ import MyCart from "../../components/MyCart/MyCart";
 
 const Home = () => {
   const [panel, setPanel] = useState(false);
-
-  useEffect(() => {}, []);
+  const [cart, setCart] = useState([]);
+  const { basket, setBasket } = useState(false);
 
   return (
     <div className="home">
@@ -26,8 +26,8 @@ const Home = () => {
           setPanel={setPanel}
           Categorys={Categorys}
         />
-        <Products />
-        <MyCart />
+        <Products cart={cart} setCart={setCart} />
+        <MyCart cart={cart} setCart={setCart} />
       </section>
       <Footer />
     </div>

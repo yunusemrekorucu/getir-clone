@@ -16,6 +16,7 @@
       height: 100%;
       margin: 0 auto;
       object-fit: cover;
+      cursor: pointer;
     }
   }
   h5 {
@@ -23,6 +24,7 @@
   }
 }
 .add-cart-btn {
+  cursor: pointer;
   width: 32px;
   height: 32px;
   position: absolute;

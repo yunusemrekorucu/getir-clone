@@ -1,22 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import Icon from "../../../assets/svgs";
 import "./product-card.scss";
 
-function ProductCard() {
+function ProductCard(props) {
+  const { cart, setCart, product } = props;
+  const addCart = () => {
+    // setCart([...cart]);
+  };
   return (
     <div className="product-card">
       <div>
-        <button className="add-cart-btn">
+        <button onClick={addCart} className="add-cart-btn">
           <Icon name="plus" size="10" fill="#5D3EBC" />
         </button>
-        <img
-          src="https://cdn.getir.com/product/5f838256a0f7355dfe62acd8_tr_1609123580796.jpeg"
-          alt=""
-        />
+        <img src={product.image} alt="" />
       </div>
-      <span className="product-price">₺11,99</span>
-      <h5>Lays Fırından</h5>
-      <span className="gr">96gr</span>
+      <span className="product-price">₺{product.price}</span>
+      <h5>{product.title}</h5>
+      <span className="gr">{product.gr}gr</span>
     </div>
   );
 }

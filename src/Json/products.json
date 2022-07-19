@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "image": "https://cdn.getir.com/product/5f838256a0f7355dfe62acd8_tr_1609123580796.jpeg",
+        "price": "11,99",
+        "dic": "6,99",
+        "title": "Lays Fırından",
+        "gr": "39"
+    },
+    {
+        "id": 2,
+        "image": "https://cdn.getir.com/product/5898a1d0a4502d0004af9aeb_tr_1608382862110.jpeg",
+        "price": "16,99",
+        "dicountedPrice": "12,99",
+        "title": "Ülker Antep Fıstıklı",
+        "gr": "65"
+    },
+    {
+        "id": 3,
+        "image": "https://cdn.getir.com/product/5c5b04940de01d0001042350_tr_1622551398627.jpeg",
+        "price": "4,10",
+        "dicountedPrice": "2,10",
+        "title": "Albeni",
+        "gr": "40"
+    },
+    {
+        "id": 4,
+        "image": "https://cdn.getir.com/product/5c5b041646cb650001637995_tr_1641909715844.jpeg",
+        "price": "5,99",
+        "dicountedPrice": "3,99",
+        "title": "Çizi",
+        "gr": "70"
+    },
+    {
+        "id": 5,
+        "image": "https://cdn.getir.com/product/559eb7770fdb080c004d5e86_tr_1602050585768.jpeg",
+        "price": "40,99",
+        "dicountedPrice": "30,99",
+        "title": "Nutella",
+        "gr": "400"
+    }
+]
