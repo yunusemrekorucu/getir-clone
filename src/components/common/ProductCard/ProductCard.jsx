@@ -5,7 +5,8 @@ import "./product-card.scss";
 function ProductCard(props) {
   const { cart, setCart, product } = props;
   const addCart = () => {
-    // setCart([...cart]);
+    setCart([...cart, product]);
+    localStorage.setItem("item", JSON.stringify([...cart, product]));
   };
   return (
     <div className="product-card">

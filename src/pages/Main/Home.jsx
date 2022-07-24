@@ -12,7 +12,6 @@ import MyCart from "../../components/MyCart/MyCart";
 const Home = () => {
   const [panel, setPanel] = useState(false);
   const [cart, setCart] = useState([]);
-  const { basket, setBasket } = useState(false);
 
   return (
     <div className="home">
@@ -27,7 +26,7 @@ const Home = () => {
           Categorys={Categorys}
         />
         <Products cart={cart} setCart={setCart} />
-        <MyCart cart={cart} setCart={setCart} />
+        <MyCart cart={cart} />
       </section>
       <Footer />
     </div>

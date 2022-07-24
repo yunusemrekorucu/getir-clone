@@ -60,6 +60,7 @@
   }
 }
 .drop-menu {
+  visibility: hidden;
   background: white;
   height: 376px;
   width: 260px;
@@ -117,6 +118,7 @@
 }
 .open-drop-menu {
   opacity: 1;
+  visibility: visible;
 }
 .logo {
   display: none;

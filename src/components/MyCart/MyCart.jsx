@@ -1,17 +1,13 @@
 import React, { useEffect, useState } from "react";
+import Icon from "../../assets/svgs";
 import "./my-cart.scss";
 
 function MyCart(props) {
-  const { cart, setCart } = props;
+  const { cart } = props;
+  const [cartPrice, setCartPrice] = useState(200);
 
-  useEffect(() => {
-    console.log(cart);
-    if (cart == "") {
-      console.log("sepet boş");
-    } else {
-      console.log("sepet dolu");
-    }
-  }, [cart]);
+  const localProducts = localStorage.getItem("item");
+  const products = JSON.parse(localProducts);
 
   return (
     <>
@@ -28,13 +24,32 @@ function MyCart(props) {
             </div>
           </>
         ) : (
-          <div className="mycart-box">
-            <div>
-              <p>Nutella</p>
-              <span>₺15.54</span>
+          <>
+            <h4>Sepetim</h4>
+            <div className="mycart-box">
+              {products.map((item) => (
+                <div className="mycart-info">
+                  <div>
+                    <h5>{item.title}</h5>
+                    <span>₺{item.price}</span>
+                  </div>
+                  <div className="cart-button">
+                    <button className="trash-btn">
+                      <Icon name="trash" size="16" fill="#5D3EBC" />
+                    </button>
+                    <span>1</span>
+                    <button className="plus-btn">
+                      <Icon name="plus" size="10" fill="#5D3EBC" />
+                    </button>
+                  </div>
+                </div>
+              ))}
+              <div className="go-to-cart">
+                <button>Sepete Git</button>
+                <span>₺{cartPrice}</span>
+              </div>
             </div>
-            <button>+</button>
-          </div>
+          </>
         )}
       </div>
     </>

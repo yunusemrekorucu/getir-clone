@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Icon from "../../assets/svgs";
 import LoginModal from "../LoginModal/LoginModal";
 import "./navbar.scss";
@@ -7,6 +7,7 @@ const Navbar = (props) => {
   const [authNav, setAuthNav] = useState(false);
   const [modal, setModal] = useState(false);
   const [dropDown, setDropDown] = useState(false);
+
   useEffect(() => {
     if (!props.authenticated) {
       setAuthNav(true);
@@ -14,19 +15,33 @@ const Navbar = (props) => {
       setAuthNav(false);
     }
   }, [props.authenticated]);
+  const handleDropDown = () => {
+    if (!dropDown) {
+      setDropDown(true);
+    } else {
+      setDropDown(false);
+    }
+  };
+  useEffect(() => {
+    const closeDropDown = (e) => {
+      if (e.path[1].tagName !== "LI") {
+        setDropDown(false);
+      }
+    };
+
+    document.body.addEventListener("click", closeDropDown);
+    return () => {
+      document.body.removeEventListener("click", closeDropDown);
+    };
+  }, []);
 
   const logout = () => {
     props.setAuthenticated(false);
     localStorage.removeItem("getir_authenticated");
   };
-  const dropMenu = () => {
-    if (dropDown) {
-      setDropDown(false);
-    } else {
-      setDropDown(true);
-    }
-  };
-
+  useEffect(() => {
+    document.removeEventListener("click", setModal(false));
+  }, []);
   const openModal = () => {setModal(true)}; //prettier-ignore
   return (
     <div className="navbar">
@@ -67,15 +82,15 @@ const Navbar = (props) => {
               <Icon name="campaigins" fill="#fff" size={16} />
               <p>Kampanyalar</p>
             </li>
-            <li onClick={dropMenu}>
+            <li onClick={handleDropDown}>
               <Icon name="person" fill="#fff" size={16} />
               <p>Profil</p>
-              <span className={`down-arr ${dropDown ? "rotate-arr" : null}`}>
+              <span className={`down-arr ${dropDown ? "rotate-arr" : ""}`}>
                 <Icon name="downArrow" size={9} fill="#fff" />
               </span>
             </li>
 
-            <div className={`drop-menu ${dropDown ? `open-drop-menu` : null}`}>
+            <div className={`drop-menu ${dropDown ? `open-drop-menu` : ""}`}>
               <header>
                 <figure>
                   <img src="./svg/avatar.svg" alt="" width={26} />
